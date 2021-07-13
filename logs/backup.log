@@ -1,0 +1,49 @@
+Backup failed for Site library.test. Database or site_config.json may be corrupted
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 614, in connect
+    (self.host, self.port), self.connect_timeout, **kwargs
+  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/commands/site.py", line 441, in backup
+    force=True
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/backups.py", line 528, in scheduled_backup
+    verbose=verbose,
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/backups.py", line 565, in new_backup
+    compress_files=compress,
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/backups.py", line 85, in __init__
+    self.setup_backup_tables()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/backups.py", line 119, in setup_backup_tables
+    existing_doctypes = set([x.name for x in frappe.get_all("DocType")])
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 1434, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 1407, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/db_query.py", line 99, in execute
+    self.columns = self.get_table_columns()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/db_query.py", line 342, in get_table_columns
+    return get_table_columns(self.doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 46, in get_table_columns
+    return frappe.db.get_table_columns(doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 883, in get_table_columns
+    columns = self.get_db_table_columns('tab' + doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 874, in get_db_table_columns
+    where table_name = %s ''', table)]
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 111, in sql
+    self.connect()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 64, in connect
+    self._conn = self.get_connection()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 80, in get_connection
+    local_infile=frappe.conf.local_infile
+  File "/home/brenda/Desktop/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 353, in __init__
+    self.connect()
+  File "/home/brenda/Desktop/frappe-bench/env/lib/python3.6/site-packages/pymysql/connections.py", line 664, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+

@@ -1,0 +1,134 @@
+2021-07-12 09:05:00,505 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:06:00,567 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:07:00,776 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:08:00,846 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:09:00,916 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:10:00,984 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:11:01,049 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:12:01,109 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:13:01,178 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:14:01,247 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:15:01,316 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:16:01,387 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:17:01,454 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:18:01,521 DEBUG scheduler Access denied for site library.test
+2021-07-12 09:36:30,286 ERROR scheduler Exception in Enqueue Events for Site library.test
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 62, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 95, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 104, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 554, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 883, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 34, in get_meta
+    meta = Meta(doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 80, in __init__
+    super(Meta, self).__init__("DocType", doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 110, in __init__
+    self.load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 85, in load_from_db
+    super(Meta, self).load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 153, in load_from_db
+    frappe.throw(_("{0} {1} not found").format(_(self.doctype), self.name), frappe.DoesNotExistError)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 430, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 409, in msgprint
+    _raise_exception()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 363, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+
+2021-07-12 09:37:30,395 ERROR scheduler Exception in Enqueue Events for Site library.test
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 62, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 95, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 104, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 554, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 883, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 34, in get_meta
+    meta = Meta(doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 80, in __init__
+    super(Meta, self).__init__("DocType", doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 110, in __init__
+    self.load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 85, in load_from_db
+    super(Meta, self).load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 153, in load_from_db
+    frappe.throw(_("{0} {1} not found").format(_(self.doctype), self.name), frappe.DoesNotExistError)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 430, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 409, in msgprint
+    _raise_exception()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 363, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+
+2021-07-12 09:38:30,487 ERROR scheduler Exception in Enqueue Events for Site library.test
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 62, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 95, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 104, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 554, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 883, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 34, in get_meta
+    meta = Meta(doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 80, in __init__
+    super(Meta, self).__init__("DocType", doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 110, in __init__
+    self.load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 85, in load_from_db
+    super(Meta, self).load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 153, in load_from_db
+    frappe.throw(_("{0} {1} not found").format(_(self.doctype), self.name), frappe.DoesNotExistError)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 430, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 409, in msgprint
+    _raise_exception()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 363, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+
+2021-07-12 09:39:30,606 ERROR scheduler Exception in Enqueue Events for Site library.test
+Traceback (most recent call last):
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 62, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 95, in is_scheduler_inactive
+    if is_scheduler_disabled():
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 104, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/database/database.py", line 554, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 883, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 34, in get_meta
+    meta = Meta(doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 80, in __init__
+    super(Meta, self).__init__("DocType", doctype)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 110, in __init__
+    self.load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/meta.py", line 85, in load_from_db
+    super(Meta, self).load_from_db()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/model/document.py", line 153, in load_from_db
+    frappe.throw(_("{0} {1} not found").format(_(self.doctype), self.name), frappe.DoesNotExistError)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 430, in throw
+    msgprint(msg, raise_exception=exc, title=title, indicator='red', is_minimizable=is_minimizable, wide=wide, as_list=as_list)
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 409, in msgprint
+    _raise_exception()
+  File "/home/brenda/Desktop/frappe-bench/apps/frappe/frappe/__init__.py", line 363, in _raise_exception
+    raise raise_exception(msg)
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+
