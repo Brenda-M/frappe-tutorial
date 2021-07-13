@@ -1,0 +1,15 @@
+13:32:05 Worker rq:worker:ac1d974c0b854eb29e5cee2da641481d.brenda.17348.long: started, version 1.8.1
+13:32:05 Subscribing to channel rq:pubsub:ac1d974c0b854eb29e5cee2da641481d.brenda.17348.long
+13:32:05 Worker rq:worker:12e965f5a16e46009b0556b0f2923567.brenda.17335.short: started, version 1.8.1
+13:32:05 Worker rq:worker:e5062995b5004ce9a67d7644b6475823.brenda.17349.default: started, version 1.8.1
+13:32:05 *** Listening on long...
+13:32:05 Subscribing to channel rq:pubsub:12e965f5a16e46009b0556b0f2923567.brenda.17335.short
+13:32:05 Subscribing to channel rq:pubsub:e5062995b5004ce9a67d7644b6475823.brenda.17349.default
+13:32:05 Cleaning registries for queue: long
+13:32:05 *** Listening on short...
+13:32:05 *** Listening on default...
+13:32:05 Cleaning registries for queue: short
+13:32:05 Cleaning registries for queue: default
+13:59:06 Cleaning registries for queue: short
+13:59:06 Cleaning registries for queue: long
+13:59:06 Cleaning registries for queue: default
